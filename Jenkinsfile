@@ -1,28 +1,20 @@
 pipeline {
-
-  agent any
-
-  stages {
-
-    stage("build") {
-
-      steps {
-        echo 'building go_api'
-      }
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'building'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'testing'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'deploying'
+            }
+        }
     }
-
-    stage("test") {
-
-      steps {
-        echo 'testing go_api'
-      }
-    }
-
-    stage("deploy") {
-
-      steps {
-        echo 'deploying go_api'
-      }
-    }
-  }
 }
